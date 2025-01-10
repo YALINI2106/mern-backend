@@ -5,7 +5,7 @@ const { v4: uuidv4 } = require("uuid");
 const app = express();
 app.use(express.json())     //middleware
 
-mongoose.connect("mongodb://localhost:27017/expense ").then(() => {
+mongoose.connect("mongodb+srv://karpagayalinir2023cce:yalini2106@cluster0.ofeuubp.mongodb.net/expense ").then(() => {
     console.log("connected to database");
 });
 
@@ -103,3 +103,7 @@ app.get("/api/students",(req,res)=>{
 app.listen(3000, () => {
     console.log("Server is running on port 3000");
 })
+
+
+
+//  /?retryWrites=true&w=majority&appName=Cluster0
