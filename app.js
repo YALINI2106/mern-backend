@@ -1,8 +1,11 @@
 var express = require("express");
 const mongoose = require("mongoose");
 const { v4: uuidv4 } = require("uuid");
+const cors= require('cors')
 
 const app = express();
+
+app.use(cors())
 app.use(express.json())     //middleware
 
 mongoose.connect("mongodb+srv://karpagayalinir2023cce:yalini2106@cluster0.ofeuubp.mongodb.net/expense ").then(() => {
